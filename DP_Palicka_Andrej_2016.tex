@@ -1,0 +1,106 @@
+% options:
+% thesis=B bachelor's thesis
+% thesis=M master's thesis
+% czech thesis in Czech language
+% english thesis in English language
+% hidelinks remove colour boxes around hyperlinks
+
+\documentclass[thesis=M,english]{FITthesis}[2012/10/20]
+
+% \usepackage[utf8]{inputenc} % LaTeX source encoded as UTF-8
+% \usepackage[latin2]{inputenc} % LaTeX source encoded as ISO-8859-2
+% \usepackage[cp1250]{inputenc} % LaTeX source encoded as Windows-1250
+
+\usepackage{graphicx} %graphics files inclusion
+% \usepackage{subfig} %subfigures
+\usepackage{amsmath} %advanced maths
+\usepackage{amssymb} %additional math symbols
+
+\usepackage{dirtree} %directory tree visualisation
+
+% % list of acronyms
+% \usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
+% \iflanguage{czech}{\renewcommand*{\acronymname}{Seznam pou{\v z}it{\' y}ch zkratek}}{}
+% \makeglossaries
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% EDIT THIS
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\department{Department of (Computer Science)}
+\title{Thesis title (SPECIFY)}
+\authorGN{Andrej} %author's given name/names
+\authorFN{Pali{\v c}ka} %author's surname
+\author{Andrej Pali{\v c}ka} %author's name without academic degrees
+\authorWithDegrees{Bc. Andrej Pali{\v c}ka} %author's name with academic degrees
+\supervisor{RNDr. Petr {\v S}koda, PhD.}
+\acknowledgements{THANKS}
+\abstractEN{Summarize the contents and contribution of your work in a few sentences in English language.}
+\abstractCS{V n{\v e}kolika v{\v e}t{\' a}ch shr{\v n}te obsah a p{\v r}{\' i}nos t{\' e}to pr{\' a}ce v {\v c}esk{\' e}m jazyce.}
+\placeForDeclarationOfAuthenticity{Prague}
+\keywordsCS{Replace with comma-separated list of keywords in Czech.}
+\keywordsEN{Replace with comma-separated list of keywords in English.}
+\declarationOfAuthenticityOption{5} %select as appropriate, according to the desired license (integer 1-6)
+
+
+\begin{document}
+
+% \newacronym{CVUT}{{\v C}VUT}{{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze}
+% \newacronym{FIT}{FIT}{Fakulta informa{\v c}n{\' i}ch technologi{\' i}}
+
+\setsecnumdepth{part}
+\chapter{Introduction}
+
+
+
+\setsecnumdepth{all}
+\chapter{Astroinformatics}
+
+\chapter{Semi-supervised learning}
+In this chapter, we shall explore the theory behind semi-supervised learning and make a survey of commonly used algorithms. We shall begin with a brief description of supervised and unsupervised learning,
+so that we may better understand, how semi-supervised learning builds on top of these.
+\section{Supervised and unsupervised learning}
+\section{Semi-supervised learning}
+Let \(X=(x_0, \dots, x_n)\) be our dataset. Then \(X_l=\left(x_0,\dots,x_m\right)\) and \(X_u=\left(x_{m+1},\dots,x_n\right)\) be sequences of identically-sized vectors sampled from \(\mathbb{X}\). Then let \(Y=\left(y_0, \dots, y_m\right)\) be a set of known labels for set \(X_l\) data points, where \(y_i\) is a label for \(x_i\). This is how semi-supervised data set \emph{usually} looks like. This resembles a supervised learning in that we have labeled data, however with an addition of also having unlabeled data, which may help us estimate the distribution of the data set more preciselly.
+
+There is, however, another possible variant of semi-supervised learning. Here, we are not using labeled data, but merely some constraints. These constraints may link some points, that share the same label, or they may reveal the actual number of classes. This resembles unsupervised learning, however with some apriori information about the data.
+
+We may also differentiate between semi-supervised algorithms by the goal they are trying to achieve. \emph{Transducive} methods seek to only label the unlabeled data \(X_u\). \emph{Inductive} methods, on the other hand,
+attempts to find a mapping \(f: \mathbb{X} \rightarrow \mathbb{Y}\), that predicts a class to any point \(x\) from \(\mathbb{X}\).
+
+If we want semi-supervised learning to bring us any improvement over supervised methods, we need to make sure, 
+\chapter{Implementation}
+\chapter{Data set {\&} experiments}
+
+\setsecnumdepth{part}
+\chapter{Conclusion}
+
+
+\bibliographystyle{iso690}
+\bibliography{mybibliographyfile}
+
+\setsecnumdepth{all}
+\appendix
+
+\chapter{Acronyms}
+% \printglossaries
+
+
+\chapter{Contents of enclosed CD}
+
+%change appropriately
+
+%\begin{figure}
+%	\dirtree{%
+%		.1 readme.txt\DTcomment{the file with CD contents description}.
+%		.1 exe\DTcomment{the directory with executables}.
+%		.1 src\DTcomment{the directory of source codes}.
+%		.2 wbdcm\DTcomment{implementation sources}.
+%		.2 thesis\DTcomment{the directory of \LaTeX{} source codes of the thesis}.
+%		.1 text\DTcomment{the thesis text directory}.
+%		.2 thesis.pdf\DTcomment{the thesis text in PDF format}.
+%		.2 thesis.ps\DTcomment{the thesis text in PS format}.
+%	}
+%\end{figure}
+
+\end{document}
